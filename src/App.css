@@ -218,16 +218,56 @@ body {
 }
 
 .projects-container {
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
   text-align: center;
 }
 
-.projects-text {
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(95, 211, 209, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  max-width: 500px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--teal-primary);
+}
+
+.project-card.enlarged {
+  transform: scale(1.2);
+  border-color: var(--lime-primary);
+  box-shadow: 0 20px 60px rgba(95, 211, 209, 0.5);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project-card h3 {
+  color: var(--lime-primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-card p {
   color: var(--text-light);
-  font-size: 1.5rem;
-  opacity: 0.8;
-  margin-top: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-size: 0.95rem;
 }
 
 /* Contact Section */
@@ -297,6 +337,19 @@ body {
     bottom: 1rem;
     left: 1rem;
     padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
     font-size: 0.9rem;
   }
 }
