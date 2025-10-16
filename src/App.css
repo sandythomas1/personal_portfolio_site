@@ -263,6 +263,12 @@ body {
   margin-bottom: 0.8rem;
 }
 
+.project-card h4 {
+  color: var(--lime-primary);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
 .project-card p {
   color: var(--text-light);
   line-height: 1.6;
@@ -292,6 +298,42 @@ body {
   font-size: 1.5rem;
   opacity: 0.8;
   margin-top: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.contact-icon:hover {
+  transform: translateY(-8px) scale(1.1);
+  opacity: 1;
+}
+
+.contact-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(95, 211, 209, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  mix-blend-mode: lighten;
+}
+
+.contact-icon:hover img {
+  border-color: var(--teal-primary);
+  box-shadow: 0 10px 30px rgba(95, 211, 209, 0.4);
 }
 
 /* Animations */

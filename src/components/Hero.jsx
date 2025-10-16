@@ -15,7 +15,7 @@ const Hero = ({ onShowAbout, onShowProjects, onShowContact }) => {
             Learn More About Me
           </button>
           <button className="cta-button" onClick={onShowProjects}>
-            Projects
+            Projects/Experience
           </button>
           <button className="cta-button" onClick={onShowContact}>
             Get In Touch
