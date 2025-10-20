@@ -52,10 +52,10 @@ const Projects = ({ onGoBack }) => {
             className={`project-card ${enlargedCard === 2 ? 'enlarged' : ''}`}
             onClick={() => handleCardClick(2)}
           >
-            <h3>Project 3</h3>
-            <p>
-              Project description coming soon...
-            </p>
+            <h3>See the rest of my projects on Github & LinkedIn!!</h3>
+            <a href="https://github.com/sandythomas1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <br />
+            <a href="https://www.linkedin.com/in/sandy-thomas2027cbugrad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
         <button className="go-back-button" onClick={onGoBack}>

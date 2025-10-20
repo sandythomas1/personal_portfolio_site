@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import sandyImage from '../assets/sandy_image.jpeg';
 
 const Hero = ({ onShowAbout, onShowProjects, onShowContact }) => {
+  const [isImageEnlarged, setIsImageEnlarged] = useState(false);
+
+  const toggleImageSize = () => {
+    setIsImageEnlarged(!isImageEnlarged);
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
+        <img 
+          src={sandyImage} 
+          alt="Sandy Thomas" 
+          className={`hero-image ${isImageEnlarged ? 'enlarged' : ''}`}
+          onClick={toggleImageSize}
+        />
         <h1 className="hero-title">Sandy Thomas</h1>
         <div className="hero-subtitle">
           <p className="subtitle-text">Computer Science Student</p>
