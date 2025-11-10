@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import sandyImage from '../assets/sandy_image.jpeg';
+import youtubeIcon from '../assets/YouTube_full-color_icon_(2017).svg.png';
 
-const Hero = ({ onShowAbout, onShowProjects, onShowContact }) => {
+const Hero = ({ onShowAbout, onShowProjects, onShowContact, onShowPublishedApps }) => {
   const [isImageEnlarged, setIsImageEnlarged] = useState(false);
 
   const toggleImageSize = () => {
@@ -33,6 +34,19 @@ const Hero = ({ onShowAbout, onShowProjects, onShowContact }) => {
           <button className="cta-button" onClick={onShowContact}>
             Get In Touch
           </button>
+          <button className="cta-button" onClick={onShowPublishedApps}>
+            Published Apps
+          </button>
+        </div>
+        <div className="youtube-container">
+          <a 
+            href="https://www.youtube.com/@SandyThomasCodes" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="youtube-link"
+          >
+            <img src={youtubeIcon} alt="YouTube" className="youtube-icon" />
+          </a>
         </div>
       </div>
       <div className="hero-decoration"></div>

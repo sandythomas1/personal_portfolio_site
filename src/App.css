@@ -148,6 +148,36 @@ body {
   box-shadow: 0 10px 30px rgba(95, 211, 209, 0.4);
 }
 
+.youtube-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.youtube-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  opacity: 1;
+}
+
+.youtube-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 15px rgba(255, 0, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.youtube-link:hover .youtube-icon {
+  filter: drop-shadow(0 8px 25px rgba(255, 0, 0, 0.5));
+}
+
 /* About Section */
 .about {
   min-height: 100vh;
@@ -322,6 +352,85 @@ body {
   text-decoration: underline;
 }
 
+/* Published Apps Section */
+.published-apps {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #1e293b 0%, var(--dark-bg) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.published-apps-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.apps-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 2px solid rgba(95, 211, 209, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+  width: 100%;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--teal-primary);
+  box-shadow: 0 15px 40px rgba(95, 211, 209, 0.3);
+}
+
+.app-card h3 {
+  color: var(--lime-primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-description {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.app-link {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--teal-primary), var(--lime-primary));
+  color: var(--dark-bg);
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.app-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(95, 211, 209, 0.5);
+}
+
+.app-url {
+  color: var(--teal-primary);
+  font-size: 1rem;
+  font-family: monospace;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
 /* Contact Section */
 .contact {
   min-height: 100vh;
@@ -369,17 +478,14 @@ body {
 .contact-icon img {
   width: 80px;
   height: 80px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid rgba(95, 211, 209, 0.3);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+  transition: box-shadow 0.3s ease;
   background: transparent;
   mix-blend-mode: screen;
   filter: brightness(1.2) contrast(1.1);
 }
 
 .contact-icon:hover img {
-  border-color: var(--teal-primary);
   box-shadow: 0 10px 30px rgba(95, 211, 209, 0.4);
 }
 
@@ -434,6 +540,11 @@ body {
     font-size: 1rem;
   }
 
+  .youtube-icon {
+    width: 50px;
+    height: 50px;
+  }
+
   .go-back-button {
     bottom: 1rem;
     left: 1rem;
@@ -452,6 +563,27 @@ body {
 
   .project-card p {
     font-size: 0.9rem;
+  }
+
+  .app-card {
+    padding: 2rem;
+  }
+
+  .app-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .app-description {
+    font-size: 1rem;
+  }
+
+  .app-link {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .app-url {
+    font-size: 0.85rem;
   }
 }
 

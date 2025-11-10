@@ -1,6 +1,6 @@
 import React from 'react';
-import linkedinIcon from '../assets/linkendIN.png';
-import githubIcon from '../assets/github.jpeg';
+import linkedinIcon from '../assets/LinkedIN.png';
+import githubIcon from '../assets/Github-Logo-PNG.png';
 import emailIcon from '../assets/email.png';
 
 const Contact = ({ onGoBack }) => {
