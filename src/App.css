@@ -352,6 +352,57 @@ body {
   text-decoration: underline;
 }
 
+/* PDF Links for Projects */
+.pdf-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(95, 211, 209, 0.2);
+}
+
+.pdf-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 1rem;
+  background: rgba(95, 211, 209, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(95, 211, 209, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.pdf-icon-link:hover {
+  background: rgba(95, 211, 209, 0.2);
+  border-color: var(--teal-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(95, 211, 209, 0.3);
+  text-decoration: none !important;
+}
+
+.pdf-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.pdf-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--lime-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pdf-icon-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
 /* Published Apps Section */
 .published-apps {
   min-height: 100vh;
@@ -563,6 +614,27 @@ body {
 
   .project-card p {
     font-size: 0.9rem;
+  }
+
+  .pdf-links {
+    gap: 1rem;
+  }
+
+  .pdf-icon-link {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .pdf-icon {
+    font-size: 1.5rem;
+  }
+
+  .pdf-label {
+    font-size: 0.65rem;
+  }
+
+  .pdf-icon-img {
+    width: 26px;
+    height: 26px;
   }
 
   .app-card {
